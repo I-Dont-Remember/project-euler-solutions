@@ -1,9 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 
 void compute(void) {
+	printf("Answer is %d\n", ans);
 }
 
 int main(int argc, char* argv[]) {
+	time_t start = time(NULL);
 	compute();
+	time_t end = time(NULL);
+	printf("Finished in %ld seconds\n", (end -start));
 	return 0;
 }

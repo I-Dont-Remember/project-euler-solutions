@@ -8,8 +8,10 @@ ifndef p
 $(error p variable is not set)
 endif
 
-p$(p):
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ src/p$(p).c
+.PHONY: force
+
+p$(p): force
+	@$(CC) $(CFLAGS) $(LDFLAGS) -o $@ src/p$(p).c
 
 create:
 	@[ ! -f src/p$(p).c ] && cp template src/p$(p).c && echo "Made new problem p$(p).c"
