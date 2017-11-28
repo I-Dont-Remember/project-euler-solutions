@@ -1,0 +1,3 @@
+- Add ability to copy answer from answer file into template/somewhere for instant comparison
+    - sed, awk, all good candidates
+
