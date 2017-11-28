@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "euler.h"
 
 void compute(void) {
 	int max = 1000;
