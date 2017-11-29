@@ -2,8 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <math.h>
+#include "common.h"
 
 void compute(void) {
+	long ans = 0;
 	printf("Answer is %ld\n", ans);
 }
 
