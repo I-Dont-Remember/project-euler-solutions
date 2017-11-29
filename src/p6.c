@@ -18,6 +18,14 @@ Find the difference between the sum of the squares of the first one hundred natu
 
 */
 
+// removes loop for constant time function
+long better_sum_squares(int n) {
+	long sum = 0;
+	sum = n * (n+1) * (2*n + 1) / 6;
+
+	return sum;
+}
+
 long sum_squares(int n) {
 	long sum = 0;
 	for (int i=1; i < (n+1); i++) {
@@ -26,6 +34,16 @@ long sum_squares(int n) {
 
 	return sum;
 }
+
+// removes loop for constant time function
+long better_square_sums(int n) {
+	long sum = n * (n +1) /2;
+	sum *= sum;
+	
+	return sum;
+
+}
+
 
 long square_sums(int n) {
 	long sum = 0;
@@ -38,9 +56,12 @@ long square_sums(int n) {
 
 }
 // Naive approach, just implement as stated with no improvements to the math
+
+// Fastest way probably involves a number trick to find the difference at each
+// number in the chain so you only run through n (100) one time.
 void compute(void) {
-	long squares = sum_squares(100);
-	long summed = square_sums(100);
+	long squares = better_sum_squares(100);
+	long summed = better_square_sums(100);
 	long ans = summed - squares;
 	printf("Answer is %ld\n", ans);
 }
