@@ -6,3 +6,6 @@ Good practice for both rusty math skills and getting better with basic programmi
 
 - Also this https://github.com/fabiomcosta/euler
 
+- Eventually I will move on from using Project Euler for C practice and switch to a scripting
+  language for reasons that I can't say better than this S.O. post https://stackoverflow.com/questions/1991175/how-to-code-a-solution-to-deal-with-large-numbers#1991217
+

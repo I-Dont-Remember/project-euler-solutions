@@ -1,6 +1,7 @@
 OBJECTS= src/p$(p).o
 CFLAGS= -g -Wall
-LDLIBS=
+LDFLAGS=
+LDLIBS= -lm
 CC=c99
 ALL_EXECUTABLES := $(shell find . -type f ! -name '*.*' -name 'p[0-9]*')
 
@@ -11,7 +12,7 @@ endif
 .PHONY: force
 
 p$(p): force
-	@$(CC) $(CFLAGS) $(LDFLAGS) -o $@ src/p$(p).c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ src/p$(p).c $(LDLIBS)
 
 create:
 	@[ ! -f src/p$(p).c ] && cp template src/p$(p).c && echo "Made new problem p$(p).c"
