@@ -4,7 +4,7 @@
 #include <time.h>
 
 void compute(void) {
-	printf("Answer is %d\n", ans);
+	printf("Answer is %ld\n", ans);
 }
 
 int main(int argc, char* argv[]) {
