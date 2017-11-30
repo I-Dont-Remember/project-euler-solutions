@@ -4,6 +4,14 @@
 #include <math.h>
 
 int is_prime(long number) {
+	if (number == 0 || number == 1) {
+		return 0;
+	}
+
+	if (number == 2) {
+		return 1;
+	}
+
 	long sqrt_num = (long) ceil(sqrtl((long double) number));
 	for (long i=2; i<= sqrt_num; i++) {
 		if (number % i == 0) {
